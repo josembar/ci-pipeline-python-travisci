@@ -8,8 +8,12 @@ before_install:
 - docker build -t pym .
 install:
 - pip install -r requirements.txt
+jobs:
+include:
+- stage: Unit testing
 script:
 - python -m unittest
+- stage: Push image to DockerHub
 script:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker tag pym:latest josebo/jose-test-images:latest
