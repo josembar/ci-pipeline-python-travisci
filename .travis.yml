@@ -10,6 +10,10 @@ install:
 - pip install -r requirements.txt
 script:
 - python -m unittest
+script:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker tag pym:latest josebo/jose-test-images:latest
+- docker push josebo/jose-test-images:latest
 env:
   global:
   - secure: U6tYIVSINJY8J3WPDDbI7cFnYj5sdHB+6xPmG1q107AUceJiLQqhEWrOrrEHfCORv2TdEUAevdG+GqYmwrM15kA57jL8rbEe58rtstg8lLX3MZFtvRHLvjdeUgmoU6kI7eqXyWTXuE7Vxosefv3vNCp96WLXundQDteVkHOTXbq1I+kZFSeNwePYG6iIkpoXtY485Iryxo5PpZ28Bjpu89LPDe9j+l9UfAsQOu00LYeLbTfZAQYWDYGh09KbnmHiaeP1g4R/imeGGrzvJL2Eyk8LEYdKn/PCt1v9Kxm8d0/grXirHUSbabbDJqCn0U/m1FGJB193l6FxrdoiLkfVAqtv6vTQToNL+bhesOmxJ6me6MTHnuX+yBjwLKnKAR1UCybyoLC6AgWvHsPLu3ccbhc2Hx7wnXzgcWMJHUFYJfh/GyDf56EEquoJTh3nqdIvyRoKl/qGNfij2i7hJ3TfZY9W0lw2QXF2rqu/sQWGF25YkolpCUp3i0gDG48ZgGDRsfMCrZY95Z34Yvr6ukdtSOrbhAikMSL7bpujdUbwa6//nvTjOd2KqGwn7kCBf+IJsR9ERr7MMlfuWLsoruCN4fQLAgfLSfcKW9a7eDobqprYvDPWUfCzqvEQYV7SWyhstt8xV082Y33vebi68GWH+nx0FvO3RUK8t5Y1+cl6aDY=
