@@ -1,16 +1,15 @@
 language: python
-
 python:
-  - "3.8"
-
+- '3.8'
 services:
-  - docker
-
+- docker
 before_install:
-  - python -m pip install --upgrade pip
-
+- python -m pip install --upgrade pip
 install:
-  - pip install -r requirements.txt
-
+- pip install -r requirements.txt
 script:
-  - python -m unittest 
+- python -m unittest
+env:
+  global:
+  - secure: U6tYIVSINJY8J3WPDDbI7cFnYj5sdHB+6xPmG1q107AUceJiLQqhEWrOrrEHfCORv2TdEUAevdG+GqYmwrM15kA57jL8rbEe58rtstg8lLX3MZFtvRHLvjdeUgmoU6kI7eqXyWTXuE7Vxosefv3vNCp96WLXundQDteVkHOTXbq1I+kZFSeNwePYG6iIkpoXtY485Iryxo5PpZ28Bjpu89LPDe9j+l9UfAsQOu00LYeLbTfZAQYWDYGh09KbnmHiaeP1g4R/imeGGrzvJL2Eyk8LEYdKn/PCt1v9Kxm8d0/grXirHUSbabbDJqCn0U/m1FGJB193l6FxrdoiLkfVAqtv6vTQToNL+bhesOmxJ6me6MTHnuX+yBjwLKnKAR1UCybyoLC6AgWvHsPLu3ccbhc2Hx7wnXzgcWMJHUFYJfh/GyDf56EEquoJTh3nqdIvyRoKl/qGNfij2i7hJ3TfZY9W0lw2QXF2rqu/sQWGF25YkolpCUp3i0gDG48ZgGDRsfMCrZY95Z34Yvr6ukdtSOrbhAikMSL7bpujdUbwa6//nvTjOd2KqGwn7kCBf+IJsR9ERr7MMlfuWLsoruCN4fQLAgfLSfcKW9a7eDobqprYvDPWUfCzqvEQYV7SWyhstt8xV082Y33vebi68GWH+nx0FvO3RUK8t5Y1+cl6aDY=
+  - secure: hHcw/v4TPsmh1xR+TTaVjWX+wirmRtOOyY5tMcaSl77z1Tddw6kO+CFXHhW3+WfcRL/M2boiiFDSXpr1Ac10Ho+AO5rNZEDddH+DVLdZXnjh2sVqeg3tUviiC1oPA/FD1sjE2tx3cFKPJA33qmR+y3U3+AP8zLoLrES5ba60rspB1M2DPqTU0xXnGBTL5alFEyY87v1SifgkpBQoo57xVjMez8l1IB/6Fr5/QoJhLvngWHhnWfjPVrgSL+yb+0aYjH3exopV8LiBeu2SDS/KSv9o0xWTPVhfihaOIriFxSd/ylaACGiy4dlIPZ8j+ShLI8S4Rp1u3nAiEq2N+CelIlDzBTr647GF1m4M4e20ChT7Nmf5KtYpJe6CAekNImmEnomMLwfRC77qd5j9zWw+AX9A3Y7a9M8UChIayRfxfXFNaRa0LVyQktElJ1elk1rnGCzYJlmg9Y+rS+coUV9zZbLet0NVOBwNqrCcU8DZzrZo9g1VyYjXzLnj9Ul4FgQ/qm5zKHe4HeyITYmIC+BrvdyLkzhPA45jJxRf5qizuahZnvjQvwhZEk69OoWZKy46xVnRc6fuQN2s4oi8IsCACfcvCJwhQnKtAv/uQlBsvCdiCPCHt8+F1r0xZmdfR/5izIq7urLZBbt9b6KmDcjolAur/zx0NslhafZhqlNF4xg=
